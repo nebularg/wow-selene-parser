@@ -1,0 +1,384 @@
+# A standard library for World of Warcraft generated from Blizzard_APIDocumentation
+
+[selene]
+base = "lua51"
+name = "wow"
+
+# std lua changes
+
+[debug]
+removed = true
+[dofile]
+removed = true
+[io]
+removed = true
+[load]
+removed = true
+[loadfile]
+removed = true
+[module]
+removed = true
+[os]
+removed = true
+[package]
+removed = true
+[require]
+removed = true
+
+[debuglocals]
+args = []
+
+[debugprofilestart]
+args = []
+
+[debugprofilestop]
+args = []
+
+# [[debugstack.args]]
+# type = "thread"
+# required = false
+[[debugstack.args]]
+type = "number"
+required = false
+[[debugstack.args]]
+type = "number"
+required = false
+[[debugstack.args]]
+type = "number"
+required = false
+
+[geterrorhandler]
+args = []
+
+[[seterrorhandler.args]]
+type = "function"
+
+[[date.args]]
+type = "string"
+required = false
+[[date.args]]
+type = "number"
+required = false
+
+[[difftime.args]]
+type = "number"
+[[difftime.args]]
+type = "number"
+
+[[time.args]]
+type = "table"
+required = false
+
+[forceinsecure]
+args = []
+
+[[hooksecurefunc.args]]
+type = "table"
+required = false
+[[hooksecurefunc.args]]
+type = "string"
+[[hooksecurefunc.args]]
+type = "function"
+
+[issecure]
+args = []
+
+[[issecurevariable.args]]
+type = "table"
+required = false
+[[issecurevariable.args]]
+type = "string"
+
+[[scrub.args]]
+type = "..."
+
+[[securecall.args]]
+type = "any" # function or string
+[[securecall.args]]
+type = "..."
+
+# math
+[[abs.args]]
+type = "number"
+
+[[acos.args]]
+type = "number"
+
+[[asin.args]]
+type = "number"
+
+[[atan.args]]
+type = "number"
+
+[[atan2.args]]
+type = "number"
+
+[[atan2.args]]
+type = "number"
+
+[[ceil.args]]
+type = "number"
+
+[[cos.args]]
+type = "number"
+
+[[deg.args]]
+type = "number"
+
+[[exp.args]]
+type = "number"
+
+[[floor.args]]
+type = "number"
+
+[[frexp.args]]
+type = "number"
+
+[[ldexp.args]]
+type = "number"
+[[ldexp.args]]
+type = "number"
+
+[[log.args]]
+type = "number"
+
+[[log10.args]]
+type = "number"
+
+[[max.args]]
+type = "number"
+[[max.args]]
+type = "..."
+required = "use of max only makes sense with more than 1 parameter"
+
+[[min.args]]
+type = "number"
+[[min.args]]
+type = "..."
+required = "use of min only makes sense with more than 1 parameter"
+
+[[mod.args]]
+type = "number"
+[[mod.args]]
+type = "number"
+
+[[rad.args]]
+type = "number"
+
+[[random.args]]
+type = "number"
+required = false
+[[random.args]]
+type = "number"
+required = false
+
+[randomseed]
+removed = true
+
+[[sin.args]]
+type = "number"
+
+[[sqrt.args]]
+type = "number"
+
+[[tan.args]]
+type = "number"
+
+[[fastrandom.args]]
+type = "number"
+[[fastrandom.args]]
+type = "number"
+
+# string
+[[string.join.args]]
+type = "string"
+[[string.join.args]]
+type = "..."
+
+[[string.split.args]]
+type = "string"
+[[string.split.args]]
+type = "string"
+
+[[string.trim.args]]
+type = "string"
+[[string.trim.args]]
+type = "string"
+required = false
+
+[[format.args]]
+type = "string"
+[[format.args]]
+type = "..."
+required = "string.format should only be used for strings that need formatting"
+
+[[gmatch.args]]
+type = "string"
+[[gmatch.args]]
+type = "string"
+
+[[gsub.args]]
+type = "string"
+[[gsub.args]]
+type = "string" # TODO: Pattern type?
+[[gsub.args]]
+type = "any"
+[[gsub.args]]
+type = "number"
+required = false
+
+[[strbyte.args]]
+type = "string"
+[[strbyte.args]]
+type = "number"
+required = false
+[[strbyte.args]]
+type = "number"
+required = false
+
+[[strchar.args]]
+type = "number"
+required = "string.char should be used with an argument despite it not throwing"
+[[strchar.args]]
+type = "..."
+required = false
+
+[[strfind.args]]
+type = "string"
+[[strfind.args]]
+type = "string" # TODO: Pattern type?
+[[strfind.args]]
+type = "number"
+required = false
+[[strifind.args]]
+type = "bool"
+required = false
+
+[[strlen.args]]
+type = "string"
+
+[[strlower.args]]
+type = "string"
+
+[[strmatch.args]]
+type = "string"
+[[strmatch.args]]
+type = "string" # TODO: Pattern type?
+[[strmatch.args]]
+type = "number"
+required = false
+
+[[strrep.args]]
+type = "string"
+[[strrep.args]]
+type = "number"
+
+[[strrev.args]]
+type = "string"
+
+[[strsub.args]]
+type = "string"
+[[strsub.args]]
+type = "number"
+[[strsub.args]]
+type = "number"
+required = false
+
+[[strupper.args]]
+type = "string"
+
+[[strjoin.args]]
+type = "string"
+[[strjoin.args]]
+type = "..."
+
+[[strsplit.args]]
+type = "string"
+[[strsplit.args]]
+type = "string"
+
+[[strtrim.args]]
+type = "string"
+[[strtrim.args]]
+type = "string"
+required = false
+
+[[strcmputf8i.args]]
+type = "string"
+[[strcmputf8i.args]]
+type = "string"
+
+[[strlenutf8.args]]
+type = "string"
+
+[[strconcat.args]]
+type = "..."
+
+[[tostringall.args]]
+type = "..."
+
+# table
+[[sort.args]]
+type = "table"
+[[sort.args]]
+type = "function"
+required = false
+
+[[tinsert.args]]
+type = "table"
+[[tinsert.args]]
+type = "any"
+[[tinsert.args]]
+type = "any"
+required = false
+
+[[tremove.args]]
+type = "table"
+[[tremove.args]]
+type = "number"
+required = false
+
+[[table.wipe.args]]
+type = "table"
+
+[[wipe.args]]
+type = "table"
+
+# bit
+[[bit.bnot.args]]
+type = "number"
+
+[[bit.band.args]]
+type = "number"
+[[bit.band.args]]
+type = "..."
+
+[[bit.bor.args]]
+type = "number"
+[[bit.bor.args]]
+type = "..."
+
+[[bit.bxor.args]]
+type = "number"
+[[bit.bxor.args]]
+type = "..."
+
+[[bit.lshift.args]]
+type = "number"
+[[bit.lshift.args]]
+type = "number"
+
+[[bit.rshift.args]]
+type = "number"
+[[bit.rshift.args]]
+type = "number"
+
+[[bit.arshift.args]]
+type = "number"
+[[bit.arshift.args]]
+type = "number"
+
+[[bit.mod.args]]
+type = "number"
+[[bit.mod.args]]
+type = "number"
