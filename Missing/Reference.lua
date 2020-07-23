@@ -7638,6 +7638,16 @@ local Reference =
 			},
 		},
 		{
+			Name = "GetPhysicalScreenSize",
+			Type = "Function",
+
+			Returns =
+			{
+				{ Name = "width", Type = "number", Nilable = false },
+				{ Name = "height", Type = "number", Nilable = false },
+			},
+		},
+		{
 			Name = "GetPlayerFacing",
 			Type = "Function",
 
