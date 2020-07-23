@@ -7864,6 +7864,29 @@ local Reference =
 			},
 		},
 		{
+			Name = "GetPvpTalentInfoByID",
+			Type = "Function",
+
+			Arguments =
+			{
+				{ Name = "talentID", Type = "number", Nilable = false },
+			},
+			Returns =
+			{
+				{ Name = "talentID", Type = "number", Nilable = false },
+				{ Name = "name", Type = "string", Nilable = false },
+				{ Name = "texture", Type = "number", Nilable = false },
+				{ Name = "selected", Type = "bool", Nilable = false },
+				{ Name = "available", Type = "bool", Nilable = false },
+				{ Name = "spellID", Type = "number", Nilable = false },
+				{ Name = "unlocked", Type = "bool", Nilable = false },
+				{ Name = "row", Type = "number", Nilable = false },
+				{ Name = "column", Type = "number", Nilable = false },
+				{ Name = "known", Type = "bool", Nilable = false },
+				{ Name = "unknown", Type = "bool", Nilable = false },
+			},
+		},
+		{
 			Name = "GetPVPTimer",
 			Type = "Function",
 
@@ -11664,7 +11687,7 @@ local Reference =
 			Returns =
 			{
 				{ Name = "isUsable", Type = "bool", Nilable = false },
-				{ Name = "notEnoughMana", Type = "any", Nilable = false },
+				{ Name = "notEnoughMana", Type = "bool", Nilable = false },
 			},
 		},
 		{
@@ -14787,6 +14810,20 @@ local Reference =
 				{ Name = "scaledPercent", Type = "any", Nilable = false },
 				{ Name = "rawPercent", Type = "any", Nilable = false },
 				{ Name = "threatValue", Type = "any", Nilable = false },
+			},
+		},
+		{
+			Name = "UnitEffectiveLevel",
+			Type = "Function",
+
+			Arguments =
+			{
+				{ Name = "unit", Type = "string", Nilable = false },
+			},
+
+			Returns =
+			{
+				{ Name = "level", Type = "number", Nilable = false },
 			},
 		},
 		{
