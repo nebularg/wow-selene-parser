@@ -80,3 +80,10 @@ with open('FrameXML/Constants.lua') as f:
         match = re.match(r'^([A-Z0-9_]+)\s*=', line)
         if match:
             print(f'[{match[1]}]\nproperty = true\n')
+
+print('# GlobalStrings')
+with open('FrameXML/GlobalStrings.lua') as f:
+    for line in f.readlines():
+        match = re.match(r'^_G\["(.+)"\]\s*=', line) or re.match(r'^([A-Z0-9_]+)\s*=', line)
+        if match:
+            print(f'[{match[1]}]\nproperty = true\n')
