@@ -3966,13 +3966,15 @@ local Reference =
 
 			Arguments =
 			{
-				{ Name = "id", Type = "number", Nilable = false },
+				{ Name = "categoryId", Type = "number", Nilable = false },
+				{ Name = "includeAll", Type = "boolean", Nilable = true },
 			},
 
 			Returns =
 			{
-				{ Name = "numItems", Type = "number", Nilable = false },
-				{ Name = "numCompleted", Type = "number", Nilable = false },
+				{ Name = "total ", Type = "number", Nilable = false },
+				{ Name = "completed", Type = "number", Nilable = false },
+				{ Name = "incompleted", Type = "number", Nilable = false },
 			},
 		},
 		{
