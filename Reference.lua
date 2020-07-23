@@ -1941,13 +1941,13 @@ local Reference =
 
 			Arguments =
 			{
-				{ Name = "menuList", Type = "any", Nilable = false },
-				{ Name = "menuFrame", Type = "any", Nilable = false },
-				{ Name = "anchor", Type = "any", Nilable = false },
-				{ Name = "x", Type = "any", Nilable = false },
-				{ Name = "y", Type = "any", Nilable = false },
-				{ Name = "displayMode", Type = "string", Nilable = false },
-				{ Name = "autoHideDelay", Type = "any", Nilable = false },
+				{ Name = "menuList", Type = "table", Nilable = false },
+				{ Name = "menuFrame", Type = "table", Nilable = false },
+				{ Name = "anchor", Type = "string", Nilable = true },
+				{ Name = "x", Type = "number", Nilable = true },
+				{ Name = "y", Type = "number", Nilable = true },
+				{ Name = "displayMode", Type = "string", Nilable = true },
+				{ Name = "autoHideDelay", Type = "number", Nilable = true },
 			},
 		},
 		{
