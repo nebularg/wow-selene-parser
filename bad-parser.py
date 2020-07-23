@@ -66,7 +66,7 @@ for _, f in BAD.functions.items():
                 # older stuff uses the struct name as the type instead setting it as 'InnerType'
                 # print('type = { display = "%s" }' % a.Type)
                 print('type = "table"')
-            if 'Default' in a:
+            if 'Default' in a or a.Nilable:
                 print('required = false')
     else:
         print(f'[{func}]\nargs = []')
