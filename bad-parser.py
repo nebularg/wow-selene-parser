@@ -57,7 +57,9 @@ for _, f in BAD.functions.items():
     if 'Arguments' in f:
         for _, a in f.Arguments.items():
             print(f'[[{func}.args]]')
-            if a.Type in ['number', 'string', 'table', 'bool', 'function']:
+            if a.Type in ['number', 'string', 'table', 'bool', 'function', 'any']:
+                # if a.Type == 'any':
+                #     print(f'{func} {a.Name} is {a.Type} !', file=sys.stderr)
                 print(f'type = "{a.Type}"')
             elif a.Type in enums:
                 # so selene handles string[] but not int[]
