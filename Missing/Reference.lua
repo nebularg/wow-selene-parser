@@ -3967,7 +3967,7 @@ local Reference =
 			Arguments =
 			{
 				{ Name = "categoryId", Type = "number", Nilable = false },
-				{ Name = "includeAll", Type = "boolean", Nilable = true },
+				{ Name = "includeAll", Type = "bool", Nilable = true },
 			},
 
 			Returns =
