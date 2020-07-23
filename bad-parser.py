@@ -13,25 +13,30 @@ if not os.path.exists('FrameXML/Blizzard_APIDocumentation/Blizzard_APIDocumentat
     print('Missing FrameXML')
     sys.exit(1)
 
-with open('FrameXML/Mixin.lua', encoding='utf-8-sig') as f:  # bom!?
-    lua.execute(f.read())
+
+def dofile(filename):
+    try:
+        with open(filename, encoding='utf-8-sig') as f:  # bom!?
+            lua.execute(f.read())
+    except OSError as e:
+        print(f'{e.filename}: {e.message}', file=sys.stderr)
+    except LuaError as e:
+        print(f'{filename}: {e}', file=sys.stderr)
+    except LuaSyntaxError as e:
+        print(f'{filename}: {e}', file=sys.stderr)
+
+
+dofile('FrameXML/Mixin.lua')
 
 with open('FrameXML/Blizzard_APIDocumentation/Blizzard_APIDocumentation.toc') as toc:
     for line in toc.readlines():
         line = line.strip()
         if line and not line.startswith('#'):
-            try:
-                with open('FrameXML/Blizzard_APIDocumentation/' + line) as f:
-                    lua.execute(f.read())
-            except OSError as e:
-                print(f'{e.filename}: {e.message}', file=sys.stderr)
-            except LuaError as e:
-                print(f'{line}: {e.message}', file=sys.stderr)
+            dofile('FrameXML/Blizzard_APIDocumentation/' + line)
 
 # Someone generated compatible docs for the rest of the API
 # This needs to have the FrameXML defined functions split out.
-with open('Missing/Reference.lua') as f:
-    lua.execute(f.read())
+dofile('Missing/Reference.lua')
 
 
 BAD = lua.globals().APIDocumentation
@@ -87,6 +92,6 @@ with open('FrameXML/Constants.lua') as f:
 print('# GlobalStrings')
 with open('FrameXML/GlobalStrings.lua') as f:
     for line in f.readlines():
-        match = re.match(r'^([A-Z0-9_]+)\s*=', line) # re.match(r'^_G\["(.+)"\]\s*=', line) or
+        match = re.match(r'^([A-Z0-9_]+)\s*=', line)  # re.match(r'^_G\["(.+)"\]\s*=', line) or
         if match:
             print(f'[{match[1]}]\nproperty = true\n')
