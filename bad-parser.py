@@ -29,13 +29,14 @@ with open('FrameXML/Blizzard_APIDocumentation/Blizzard_APIDocumentation.toc') as
                 print(f'{line}: {e.message}', file=sys.stderr)
 
 # Someone generated compatible docs for the rest of the API
-with open('Reference.lua') as f:
+# This needs to have the FrameXML defined functions split out.
+with open('Missing/Reference.lua') as f:
     lua.execute(f.read())
 
 
 BAD = lua.globals().APIDocumentation
 
-# static info
+# header and std lua stuff
 with open('_header.toml') as f:
     print(f.read())
 
