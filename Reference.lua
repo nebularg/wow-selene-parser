@@ -14413,21 +14413,6 @@ local Reference =
 			},
 		},
 		{
-			Name = "UnitAlliedRaceInfo",
-			Type = "Function",
-
-			Arguments =
-			{
-				{ Name = "unit", Type = "string", Nilable = false },
-			},
-
-			Returns =
-			{
-				{ Name = "isAlliedRace", Type = "bool", Nilable = false },
-				{ Name = "hasHeritageArmorUnlocked", Type = "bool", Nilable = false },
-			},
-		},
-		{
 			Name = "UnitAlternatePowerInfo",
 			Type = "Function",
 
@@ -14646,38 +14631,6 @@ local Reference =
 				{ Name = "endTime", Type = "any", Nilable = false },
 				{ Name = "isTradeSkill", Type = "bool", Nilable = false },
 				{ Name = "notInterruptible", Type = "any", Nilable = false },
-			},
-		},
-		{
-			Name = "UnitClass",
-			Type = "Function",
-
-			Arguments =
-			{
-				{ Name = "unit", Type = "string", Nilable = false },
-			},
-
-			Returns =
-			{
-				{ Name = "class", Type = "any", Nilable = false },
-				{ Name = "classFileName", Type = "string", Nilable = false },
-				{ Name = "classID", Type = "number", Nilable = false },
-			},
-		},
-		{
-			Name = "UnitClassBase",
-			Type = "Function",
-
-			Arguments =
-			{
-				{ Name = "unit", Type = "string", Nilable = false },
-			},
-
-			Returns =
-			{
-				{ Name = "class", Type = "any", Nilable = false },
-				{ Name = "classFileName", Type = "string", Nilable = false },
-				{ Name = "classID", Type = "number", Nilable = false },
 			},
 		},
 		{
@@ -15051,20 +15004,6 @@ local Reference =
 			},
 		},
 		{
-			Name = "UnitIsConnected",
-			Type = "Function",
-
-			Arguments =
-			{
-				{ Name = "unit", Type = "string", Nilable = false },
-			},
-
-			Returns =
-			{
-				{ Name = "isConnected", Type = "bool", Nilable = false },
-			},
-		},
-		{
 			Name = "UnitIsControlling",
 			Type = "Function",
 
@@ -15368,48 +15307,6 @@ local Reference =
 			},
 		},
 		{
-			Name = "UnitIsWarModeActive",
-			Type = "Function",
-
-			Arguments =
-			{
-				{ Name = "unit", Type = "string", Nilable = false },
-			},
-
-			Returns =
-			{
-				{ Name = "warModeActive", Type = "any", Nilable = false },
-			},
-		},
-		{
-			Name = "UnitIsWarModeDesired",
-			Type = "Function",
-
-			Arguments =
-			{
-				{ Name = "unit", Type = "string", Nilable = false },
-			},
-
-			Returns =
-			{
-				{ Name = "warModeDesired", Type = "any", Nilable = false },
-			},
-		},
-		{
-			Name = "UnitIsWarModePhased",
-			Type = "Function",
-
-			Arguments =
-			{
-				{ Name = "unit", Type = "string", Nilable = false },
-			},
-
-			Returns =
-			{
-				{ Name = "warModePhased", Type = "any", Nilable = false },
-			},
-		},
-		{
 			Name = "UnitLevel",
 			Type = "Function",
 
@@ -15492,52 +15389,6 @@ local Reference =
 			Returns =
 			{
 				{ Name = "inParty", Type = "any", Nilable = false },
-			},
-		},
-		{
-			Name = "UnitPower",
-			Type = "Function",
-
-			Arguments =
-			{
-				{ Name = "unitID", Type = "string", Nilable = false },
-				{ Name = "powerType", Type = "any", Nilable = true },
-				{ Name = "unmodified", Type = "any", Nilable = true },
-			},
-
-			Returns =
-			{
-				{ Name = "power", Type = "any", Nilable = false },
-			},
-		},
-		{
-			Name = "UnitPowerDisplayMod",
-			Type = "Function",
-
-			Arguments =
-			{
-				{ Name = "powerType", Type = "string", Nilable = false },
-			},
-
-			Returns =
-			{
-				{ Name = "displayMod", Type = "any", Nilable = false },
-			},
-		},
-		{
-			Name = "UnitPowerMax",
-			Type = "Function",
-
-			Arguments =
-			{
-				{ Name = "unitID", Type = "string", Nilable = false },
-				{ Name = "powerType", Type = "any", Nilable = true },
-				{ Name = "unmodified", Type = "any", Nilable = true },
-			},
-
-			Returns =
-			{
-				{ Name = "maxValue", Type = "number", Nilable = false },
 			},
 		},
 		{
@@ -15662,20 +15513,6 @@ local Reference =
 			{
 				{ Name = "unit", Type = "string", Nilable = false },
 				{ Name = "role", Type = "string", Nilable = false },
-			},
-		},
-		{
-			Name = "UnitSex",
-			Type = "Function",
-
-			Arguments =
-			{
-				{ Name = "unit", Type = "string", Nilable = false },
-			},
-
-			Returns =
-			{
-				{ Name = "gender", Type = "any", Nilable = false },
 			},
 		},
 		{
