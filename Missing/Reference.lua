@@ -4861,6 +4861,20 @@ local Reference =
 			},
 		},
 		{
+			Name = "GetFileIDFromPath",
+			Type = "Function",
+
+			Arguments =
+			{
+				{ Name = "filePath", Type = "string", Nilable = false },
+			},
+
+			Returns =
+			{
+				{ Name = "fileID ", Type = "number", Nilable = false },
+			},
+		},
+		{
 			Name = "GetFinalNameFromTextureKit",
 			Type = "Function",
 
@@ -7400,6 +7414,30 @@ local Reference =
 			Returns =
 			{
 				{ Name = "playerNumber", Type = "any", Nilable = false },
+			},
+		},
+		{
+			Name = "GetNumTalents",
+			Type = "Function",
+			Project = "Classic",
+
+			Arguments =
+			{
+				{ Name = "tabIndex", Type = "number", Nilable = false },
+			},
+			Returns =
+			{
+				{ Name = "numTalents", Type = "number", Nilable = false },
+			},
+		},
+		{
+			Name = "GetNumTalentTabs",
+			Type = "Function",
+			Project = "Classic",
+
+			Returns =
+			{
+				{ Name = "numTabs", Type = "number", Nilable = false },
 			},
 		},
 		{
